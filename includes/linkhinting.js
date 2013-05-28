@@ -2,32 +2,32 @@
  * Mothers of this code:
  * =====================
  * Vimium-guys, especially philc
- * Roland Siegbert <roland.siegbert@gmail.com> 
+ * Roland Siegbert <roland.siegbert@gmail.com>
  * Powered by unicorns living on colorful rainbows!
- * 
- * 
+ *
+ *
  * Special thanks go to:
  * =====================
- * 
+ *
  * Vimium:
  * -------
- * Kudos to the vimium project! Actually this is my very first js program 
+ * Kudos to the vimium project! Actually this is my very first js program
  * I ever wrote and most of the R&D was done there and I ported it to Opera,
  * while learning the bits and pieces of js, Opera and the DOM.
- * 
+ *
  * I learned a lot from the code below!
- * 
- * 
+ *
+ *
  * Opera-Community and Devs:
  * -------------------------
  * For paciently answering my questions.
- * 
- *  
+ *
+ *
  * Thanks go to:
  * =============
  * Vimium - The hacker's browser - http://vimium.github.com/
  * Quirksmode - http://quirksmode.org/
- * 
+ *
  */
 
 
@@ -40,7 +40,7 @@ var linkHintsCss =
     'padding:0 1px;' +
     'line-height:100%;' +
     'border:1px solid grey;' +
-    'border-radius: 2px' +
+    'border-radius: 2px;' +
     'z-index:99999999;' +
     'font-family: "Liberation Sans", "Arial", "Sans";' +
   '}' +
