@@ -28,7 +28,9 @@
  */
 
 function log(msg) {
-  opera.postError("VimOperate: " + msg);
+  if(DEBUG) {
+    opera.postError("VimOperate: " + msg);
+  }
 }
 
 function toggleHelp(html) {
@@ -69,9 +71,9 @@ function isExcludedUrl(url, urls) {
     //Remove CR LF
     excludedURLs[i] = excludedURLs[i].replace(/(\r\n|\r|\n)/g,"");
     var regexp = new RegExp("^" + excludedURLs[i].replace(/\*/g, ".*")+"$");
-    log("cehcking regexp: "+ regexp);
+    log("Checking regexp: "+ regexp);
     if(url.match(regexp)){
-      log("excluded because:" + excludedURLs[i]);
+      log("Excluded because:" + excludedURLs[i]);
       isExcluded = true;
       break;
     }
@@ -79,26 +81,3 @@ function isExcludedUrl(url, urls) {
   return isExcluded;
 }
 
-
-var keyCodes = {
-  ESC: 27,
-  backspace: 8,
-  deleteKey: 46,
-  ESC: 27,
-  Up: 38,
-  k: 75,
-  Down: 40,
-  j: 74,
-  Left: 37,
-  h: 72,
-  Right: 39,
-  l: 76,
-  questionmark: 191,
-  f: 70,
-  g: 71,
-  t: 84,
-  d: 68,
-  u: 85,
-  r: 82,
-  w: 87,
-};
