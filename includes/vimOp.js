@@ -1,41 +1,41 @@
 /**
  * Mother of this code:
  * ====================
- * Roland Siegbert <roland.siegbert@gmail.com> 
+ * Roland Siegbert <roland.siegbert@gmail.com>
  * Powered by unicorns living on colorful rainbows!
- * 
- * 
+ *
+ *
  * Special thanks go to:
  * =====================
- * 
+ *
  * Vimium:
  * -------
- * Kudos to the vimium project! Actually this is my very first js program 
+ * Kudos to the vimium project! Actually this is my very first js program
  * I ever wrote and most of the R&D was done there and I ported it to Opera,
  * while learning the bits and pieces of js, Opera and the DOM.
- * 
+ *
  * Opera-Community and Devs:
  * -------------------------
  * For paciently answering my questions.
- * 
- *  
+ *
+ *
  * Thanks go to:
  * =============
  * Vimium - The hacker's browser - http://vimium.github.com/
  * Quirksmode - http://quirksmode.org/
- * 
- * 
+ *
+ *
  * TODOs:
  * ======
  * DONE: Open link in new tab
- * DONE: options 
+ * DONE: options
  * TODO: Google handling
- * 
+ *
  */
 
 
 var isHelpVisible = false;
-var previousKeyCode = 0; 
+var previousKeyCode = 0;
 var settingsStorage = widget.preferences;
 var settings = {
   excludedURLs:
@@ -55,7 +55,7 @@ settings.excludedURLs = typeof(settingsStorage.excludedURLs) != 'undefined' ? se
 window.addEventListener("keydown", function(e) {
 
 	log("KeyDown Event firing: " + e.keyCode);
-	
+
 	// Exit if excluded URL
 	if(isExcludedUrl(window.location.href, settings.excludedURLs))
 	  return;
@@ -105,7 +105,7 @@ window.addEventListener("keydown", function(e) {
 		activateLinkHintsMode();
 		linkHintsModeActivated = true;
 	}
-	
+
 	// F
 	if (e.keyCode == keyCodes.f && e.shiftKey) {
 	  activateLinkHintsMode(true);
